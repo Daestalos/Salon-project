@@ -1,0 +1,72 @@
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Коррекция и окрашивание бровей Хна\\Краска', '30');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Коррекция (моделирование) бровей', '15');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование (Долговременная укладка+ коррекция+окрашивание)', '15');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование (долговременная укладка)+коррекция', '40');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование + коррекция+окрашивание+счастье для бровей', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Окрашивание ресниц', '12');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Счастье для бровей', '15');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Удаление усиков', '5');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование ресниц с окрашиванием', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование ресниц + коррекция и окрашивание бровей', '65');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование ресниц +Ламинирование бровей и коррекция', '70');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Ламинирование ресниц +Ламинирование бровей с окрашиванием и коррекцией', '75');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Коррекция+окрашивание +ботокс(для продления окрашивания)', '35');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '1', 'Мастер-бровист', 'Нос', '5');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Маникюр комбинированный без покрытия(женский)', '30');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'ремонт ногтя', '1-5');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Мужской маникюр с покрытием', '40');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Снятие старого покрытия+маникюр', '30');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Комплекс : Снятие,маникюр,восстановление архитектуры+покрытие', '55');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Маникюр комбинированный без покрытия(мужской)', '30');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Маникюр +однотонное покрытие (укрепление гелем )', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Маникюр +однотонное покрытие (укрепление базой )', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Мужской маникюр с покрытием', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Френч', '5');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Педикюр(полная обработка стоп пальчиков + гель лак)', '55');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Педикюр(обработка пальчиков + гель лак)', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Педикюр без покрытия с аппаратной обработкой стоп(женский)', '40');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '2', 'Мастер ногтевого сервиса', 'Педикюр без покрытия с аппаратной обработкой стоп(мужской)', '45');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '3', 'Визажист', 'Дневной макияж', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '3', 'Визажист', 'Вечерний макияж', '80');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '3', 'Визажист', 'Пробный макияж', '80');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '3', 'Визажист', 'Макияж (с выездом)', '110');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Детокс кожи головы', '40');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Полировка волос', '25');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Холодное восстановление/Окудрение', '120');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Подравнивание кончиков', '15');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Аминокислотная подложка/Липидная подложка', '40');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Ботокс', '200');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Кератиновое выпрямление', '180');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Кератиновое выпрямление челки', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Абсолютное счастье для волос', '170');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Мытье и укладка', '25');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Детокс кожи головы', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '5', 'Мастер по уходу за волосами', 'Нанопластика', '240');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Комплекс: стрижка и борода', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Моделирование бороды', '20');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Комплекс: стрижка и борода', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Мужская стрижка', '35');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Детская стрижка', '30');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Женская стрижка', '45');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Стрижка машинкой', '25');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Стрижка челки', '10');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'Тонировка бороды', '20');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '6', 'Барбер', 'стрижка маленькой принцессы', '35');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'Вечерняя прическа', '70');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'Курс по прическам', '90');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'Афро прическа', '80');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'Свадебная прическа', '85');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'свадебная прическа с выездом', '110');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '7', 'Мастер по прическам', 'свадебная пробная прическа', '50');
+
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'Афронаращивание в технике скрытого окрашивания', '80');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'плетение брейд', '50');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'Прическа (Брейды в хвост )', '130');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'Снятие цветных прядей', '15');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'Плетение кос без канекалона', '35');
+INSERT INTO `services` (`id`, `category_id`, `title`, `text`, `price`) VALUES (NULL, '8', 'Афронаращивание', 'Мытье - Сушка', '20');

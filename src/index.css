@@ -1,0 +1,241 @@
+@font-face {
+	font-family: "Book Antiqua";
+	src: url("./fonts/book-antiqua/book-antiqua.eot");
+	src: url("./fonts/book-antiqua/book-antiqua.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("./fonts/book-antiqua/book-antiqua.otf") format("opentype"), /* Open Type Font */
+		url("./fonts/book-antiqua/book-antiqua.svg") format("svg"), /* Legacy iOS */
+		url("./fonts/book-antiqua/book-antiqua.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("./fonts/book-antiqua/book-antiqua.woff") format("woff"), /* Modern Browsers */
+		url("./fonts/book-antiqua/book-antiqua.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+:root {
+  /* --color-bg: #212529; */
+  --color-bg: #1B1B1B;
+  --color-active: #9e2a5e;
+  --color-footer-h4: #E4E4E4;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,*:before, *:after{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav, footer, header, aside{display: block;}
+
+html, body{
+height:100%;
+width:100%;
+font-family: "Book Antiqua";
+font-size: 100%;
+line-height: 1;
+font-size:14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;
+} 
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;} 
+button::-moz-focus-inner{padding: 0; border:0;} 
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;} 
+img{vertical-align: top;}
+
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+
+
+
+
+
+.Top-Header {
+  background-color: var(--color-bg);
+  /* padding: 2rem 0; */
+  text-align: center;
+  width: 100%; 
+  position: fixed;  
+  top: 0;  
+  z-index: 100;
+  box-shadow: 0px 2px 17px 4px #000000, -8px 22px 14px 3px rgb(0 0 0 / 21%);
+}
+
+.Top-Header-Content {
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+}
+
+.Top-Header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6em;
+  padding: 0 2.7rem;
+  text-align: center;
+
+}
+.Top-Header a:hover {
+ text-decoration: none;
+}
+
+.Top-Header-nav {
+  --bs-bg-opacity: 1;
+  background-color: #1B1B1B;
+}
+
+@media(max-width: 1300px) {
+  .Top-Header a {
+    font-size: 1.4em;
+    padding: 0 1.7rem;
+  
+  }
+
+
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  margin: 0;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+.textcolor {
+  color: red;
+}
+
+.active-link {
+  color: var(--color-active);
+  cursor: default;
+}
+
+
+
+.Footer {
+  background-color: var(--color-bg);
+  height: auto;
+}
+
+.Footer-SVG {
+  height: 115px;
+  width: 180px;
+   padding: 0 1rem;
+}
+
+.Footer h4{
+  color: var(--color-footer-h4);
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-size: calc(1rem + .3vw);
+}
+
+
+.Footer-Head p:nth-child(even){
+  margin-bottom: 5px;
+  color:#454545;
+}
+
+.Footer-Head p:nth-child(odd){
+  margin-top: 2px;
+  color:var(--color-footer-h4);
+}
+
+
+.Footer-Menu ul{
+  padding: 0;
+}
+
+.Footer-Menu ul li a{
+  padding: 0;
+  text-decoration: none;
+  color: var(--color-footer-h4);
+}
+
+.Footer-Menu ul li a[active] {
+  color: var(--color-footer-h4);
+}
+
+.Footer-Subscribe a {
+  text-decoration: none;
+  color: var(--color-footer-h4);
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.Footer-Subscribe a:hover {
+  color: var(--color-footer-h4);
+}
+
+.Footer-Subscribe a:visited {
+  color: var(--color-footer-h4);
+}
+
+@media(max-width: 1000px) {
+
+  .Footer h4{
+    font-size: calc(1rem + .2vw);
+  }
+
+  .Footer-Subscribe a {
+    text-decoration: none;
+    color: var(--color-footer-h4);
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+}
+
+@media(max-width: 767px) {
+
+  .Footer h4{
+    font-size: 1rem;
+  }
+
+  .Footer-SVG {
+    height: 80px;
+    width: 175px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .Footer h4 {
+    text-align: center;
+  }
+  
+  .Footer-Menu ul {
+    text-align: center;
+  }
+
+  .Footer-Head p {
+    text-align: center;
+  }
+
+  .Footer-Subscribe {
+    margin-bottom: 20px;
+  }
+}
+

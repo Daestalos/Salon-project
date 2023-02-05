@@ -1,0 +1,480 @@
+
+@font-face {
+	font-family: "Book Antiqua";
+	src: url("./fonts/book-antiqua/book-antiqua.eot");
+	src: url("./fonts/book-antiqua/book-antiqua.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("./fonts/book-antiqua/book-antiqua.otf") format("opentype"), /* Open Type Font */
+		url("./fonts/book-antiqua/book-antiqua.svg") format("svg"), /* Legacy iOS */
+		url("./fonts/book-antiqua/book-antiqua.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("./fonts/book-antiqua/book-antiqua.woff") format("woff"), /* Modern Browsers */
+		url("./fonts/book-antiqua/book-antiqua.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Book Antiqua";
+	background-color: --color-footer-h4;
+}
+
+:root {
+    /* --color-bg: #212529; */
+    --color-bg: #1B1B1B;
+    --color-active: #9e2a5e;
+    --color-footer-h4: #E4E4E4;
+}
+
+.btn-primary {
+    --bs-btn-bg: #b40051;
+    --bs-btn-border-color: #b40051;
+    --bs-btn-hover-bg: #202021;
+    --bs-btn-hover-border-color: #000000;
+}
+.carousel {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.Service {
+    height: auto;
+    margin-bottom: 30px;
+}
+
+
+.Service .nav-tabs .nav-link.active {
+    color: #fafaff;
+    background-color: #b40051;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.Service .nav-link {
+    color: #000000;
+}
+
+.Service p{
+    font-size: 1.2rem;
+    border-bottom: 1.5px solid;  
+}
+
+.Service-Tab ul,li{
+    font-size: 1.2rem;
+}
+
+@media(max-width: 1000px) {
+    .Service p{
+        font-size: 1rem;
+    }
+ 
+}
+
+@media(max-width: 550px) {
+    .Service p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 420px) {
+    .Service p{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+.Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.Header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.decorated{
+    text-align: center;
+}
+.decorated > span{
+   position: relative;
+   display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+   content: '';
+   position: absolute;
+   top: 50%;
+   border-bottom: 2px solid;
+   width: 300px;
+   margin: 0 20px;
+}
+.decorated > span:before{
+   right: 100%;
+}
+.decorated > span:after{
+   left: 100%;
+}
+
+
+
+
+.decorated-white{
+    text-align: center;
+}
+.decorated-white > span{
+   position: relative;
+   display: inline-block;
+}
+.decorated-white > span:before, .decorated-white > span:after{
+   content: '';
+   position: absolute;
+   top: 50%;
+   border-bottom: 2px solid;
+   /* width: 100vw; */
+   width: 300px;
+   margin: 0 20px;
+}
+.decorated-white > span:before{
+   right: 100%;
+}
+.decorated-white > span:after{
+   left: 100%;
+}
+
+
+@media(max-width: 1400px) {
+    .decorated > span:before, .decorated > span:after{
+    width: 200px;
+    }
+
+    .decorated-white > span:before, .decorated-white > span:after{
+    width: 200px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .decorated > span:before, .decorated > span:after{
+    width: 100px;
+    }
+
+    .decorated-white > span:before, .decorated-white > span:after{
+    width: 100px;
+    }
+}
+
+@media(max-width: 980px) {
+    .decorated > span:before, .decorated > span:after{
+    width: 40px;
+    }
+
+    .decorated-white > span:before, .decorated-white > span:after{
+    width: 40px;
+    }
+
+    .Header h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .News-Header h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 632px) {
+    .decorated > span:before, .decorated > span:after{
+    width: 0px;
+    }
+
+    .decorated-white > span:before, .decorated-white > span:after{
+    width: 0px;
+    }
+
+    .Header h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .News-Header h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+}
+
+
+
+.Training-Reg {
+    background-attachment: fixed;
+    background-image: url(https://brock.by/wp-content/uploads/2020/03/brock_01.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.Training-Reg-Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+
+.Team {
+    background-attachment: fixed;
+    background-image: url(https://brock.by/wp-content/uploads/2020/03/brock_01.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.Team-Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+.Team-container{
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+    background: white;
+}
+
+.Team-container img{
+    max-width: 60%;
+    border-radius: 50%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.Team-person{
+    position: relative;
+    bottom: 20%;
+    margin-bottom: 20px;
+}
+
+
+.Team-person h4{
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.Team-person a{
+    margin-top: 20px;
+    --bs-btn-padding-x: 1.75rem;
+    --bs-btn-padding-y: 0.675rem;
+}
+
+.Team-person a:hover{
+text-decoration: none;
+}
+
+
+
+.Blogpage-News {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: url("https://lafamilia.by/wp-content/uploads/2019/03/barber3_pic10.png");
+}
+
+.Blogpage-News-Header {
+    color: #E4E4E4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.Blogpage-News-Container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.Blogpage-News-Container img{
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.Blogpage-News-Text p{
+    text-indent: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 8em;
+}
+
+@media(max-width: 1480px) {
+    .Blogpage-News-Container img {
+        height: 320px;
+        width: 100%;
+    }
+  
+}
+
+@media(max-width: 1300px) {
+    .Blogpage-News-Container img {
+        height: 300px;
+        width: 100%;
+    }
+  
+}
+
+@media (max-width: 992px) {
+ .Blogpage-News-Container img {
+    height: 359px;
+    width: 100%;
+}
+}
+
+
+.News {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: url("https://lafamilia.by/wp-content/uploads/2019/03/barber3_pic10.png");
+}
+
+.News-Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+.News-container{
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    background: white;
+    border-radius: 8px 8px 0px 0px;
+    
+}
+.News-container img{
+    max-width: 100%;
+    height: 400px;
+}
+
+.News-person{
+    position: relative;
+    bottom: 20%;
+    margin-bottom: 10px;
+}
+
+
+.News-person h4{
+    text-align: center;
+    color: black;
+    text-indent: 1.5em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+
+    
+}
+
+.News-person p{
+    color: black;
+    text-indent: 1.5em;
+    font-weight: 100;
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+    line-height: 1.4;
+}
+
+
+.News-person a{
+    --bs-btn-padding-x: 1.75rem;
+    --bs-btn-padding-y: 0.675rem;
+}
+
+.News-person a:hover{
+text-decoration: none;
+}
+
+.Contacts {
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.Contacts-Form {
+    background: #f6f6f6;
+    border-radius: 15px;
+    padding: 25px 30px 25px 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);   
+}
+
+.About {
+    height: 570px;
+}
+
+.About SVG{
+    height: 80px;
+    width: 175px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.About-content {
+    margin-top: 50px;
+}
+
+.About-container{
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+    background: white; 
+}
+
+.About-container img {
+    max-width: 200px;
+}
+
+
+.Login form {
+    height: auto;
+    width: 500px;
+    background-color: white;
+    background: #f6f6f6;
+    border-radius: 15px;
+    /* border: 2px solid #1B1B1B;
+    border-radius: 5px 5px 5px 5px; */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);   
+    margin-bottom: 20px;
+}
+
+
+.Admin .nav-tabs .nav-link.active {
+    color: #fafaff;
+    background-color: #b40051;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.Admin .nav-link {
+    color: #000000;
+}
