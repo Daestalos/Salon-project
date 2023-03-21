@@ -6,6 +6,7 @@ import notfoto from '../pages/img/nofoto.png'
 import { Servicepage } from './Servicepage';
 import { Teampage } from './Teampage';
 import InputMask from 'react-input-mask';
+
 import "../Homepage.css";
 
 
@@ -58,6 +59,7 @@ const Homepage = () =>{
         }, 5000);
     }
 
+
     return (
         <>
             <Servicepage />
@@ -84,8 +86,8 @@ const Homepage = () =>{
                         </Accordion.Item>
                     ))
                 }
-
             </Accordion>
+
             <Row className='justify-content-center text-center'>
                         <Col className='mb-3 mt-3'>
                             <Link to={`/training`}>

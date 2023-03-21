@@ -1,47 +1,11 @@
 import { Container, Row, Col, Tabs, Tab, Button } from 'react-bootstrap';
 import { Slider } from '../components/Slider';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useAuth } from "../hook/useAuth";
 
 const Servicepage = () =>{
 
-    const [category, setCategory] = useState([]);
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        getСategory();
-    }, []);
-
-
-
-    function getСategory() {
-        axios.get('http://localhost/api/category.php')
-        .then(function(response) {
-            console.log(response.data);
-            setCategory(response.data);
-        })
-        .then(
-        axios.get('http://localhost/api/services.php')
-        .then(function(response) {
-            console.log(response.data);
-            setServices(response.data);
-        })
-        )
-
-    }
-
-
-
-    useEffect(() => {
-        getServices();
-    }, []);
-
-    function getServices() {
-
-    }
-
-
+    const { serviceData, categoryData } = useAuth();
 
     return (
         <>
@@ -53,16 +17,16 @@ const Servicepage = () =>{
             </Col>
         </Row>
         <Row className='h-80'>
-            <Tabs defaultActiveKey="1" id="fill-tab-example" className="mb-3" fill>
+            <Tabs defaultActiveKey={categoryData.id} id="fill-tab-example" className="mb-3" fill>
 
                 {
-                    category.map( (category) => (
-                        <Tab className='Service-Tab' eventKey={category.id} title={category.name} style={{fontSize: "5.9vw"}} >
+                    categoryData.filter( category => category.id !== 11472068).map( (category) => (
+                        <Tab className='Service-Tab' key={category.id} eventKey={category.id} title={category.title} style={{fontSize: "5.9vw"}} >
                         {
-                            services.filter(e => e.category_id === category.id).map( services =>(
-                            <Row className='w-100'>
-                                <Col className='col-10 col-md-8'><p>{services.text}</p></Col>
-                                <Col className='col text-center'><p>{`${services.price} BYN`}</p></Col>
+                            serviceData.filter(e => e.category_id === category.id).map( service =>(
+                            <Row className='w-100 d-flex align-items-end' key={service.id}>
+                                <Col className='col-10 col-md-8'><p>{service.title}</p></Col>
+                                <Col className='col text-center'><p>{`${service.price_min} BYN`}</p></Col>
                             </Row>
                             ))
                         }

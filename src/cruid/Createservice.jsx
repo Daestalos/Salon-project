@@ -19,7 +19,6 @@ function Createservice() {
   function getСategory() {
     axios.get('http://localhost/api/category.php')
     .then(function(response) {
-        console.log(response.data);
         setCategory(response.data);
     });
   }

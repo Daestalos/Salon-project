@@ -31,46 +31,48 @@ import { AuthProvider } from './hoc/AuthProvider';
 
 function App() {
   return (
-    <AuthProvider>
 
-      <Routes>
-        <Route path='/' element={<Layout />}>
+      <AuthProvider>
 
-          <Route index element={<Homepage />}/>
-          <Route path="service" element={<Servicepage />}/>
-          <Route path="team" element={<Teampage />}/>
-          <Route path="training" element={<Trainingpage />}/>
-          
-          <Route path="about" element={<Aboutpage />}/>
+        <Routes>
+          <Route path='/' element={<Layout />}>
 
-          <Route path="posts/" element={<Blogpage />}/>
-          <Route path="posts/:id" element={<Singlepage />}/>
+            <Route index element={<Homepage />}/>
+            <Route path="service" element={<Servicepage />}/>
+            <Route path="team" element={<Teampage />}/>
+            <Route path="training" element={<Trainingpage />}/>
+            
+            <Route path="about" element={<Aboutpage />}/>
 
-          <Route path="team/new" element={<RequireAuth><Createmasters /></RequireAuth>}/>
-          <Route path="team/:id/edit" element={<RequireAuth><Editmasters /></RequireAuth>}/>
-          <Route path="posts/new" element={<RequireAuth><Createpost /></RequireAuth>}/>
-          <Route path="posts/:id/edit" element={<RequireAuth><Editpost /></RequireAuth>}/>
-          <Route path="service/:id/edit" element={<RequireAuth><Editservice /></RequireAuth>}/>
-          <Route path="service/new" element={<RequireAuth><Createservice /></RequireAuth>}/>
+            <Route path="posts/" element={<Blogpage />}/>
+            <Route path="posts/:id" element={<Singlepage />}/>
 
-          <Route path="user/:id/edit" element={<Edituser />}/>
-          <Route path="user/:id" element={<RequireAuth><Userpage /></RequireAuth>}/>
-          <Route path="regservice/new" element={<RequireAuth><Createrecord /></RequireAuth>}/>
+            <Route path="team/new" element={<RequireAuth><Createmasters /></RequireAuth>}/>
+            <Route path="team/:id/edit" element={<RequireAuth><Editmasters /></RequireAuth>}/>
+            <Route path="posts/new" element={<RequireAuth><Createpost /></RequireAuth>}/>
+            <Route path="posts/:id/edit" element={<RequireAuth><Editpost /></RequireAuth>}/>
+            <Route path="service/:id/edit" element={<RequireAuth><Editservice /></RequireAuth>}/>
+            <Route path="service/new" element={<RequireAuth><Createservice /></RequireAuth>}/>
 
-          <Route path="login" element={<Loginpage />}/>
-          <Route path="register" element={<Registerpage />}/>
-          <Route path="admin" element={
-          <RequireAuth>
-            <Adminpage />
-          </RequireAuth>
-          }/>
+            <Route path="user/:id/edit" element={<Edituser />}/>
+            <Route path="user/:id" element={<RequireAuth><Userpage /></RequireAuth>}/>
+            <Route path="regservice/new" element={<RequireAuth><Createrecord /></RequireAuth>}/>
+
+            <Route path="login" element={<Loginpage />}/>
+            <Route path="register" element={<Registerpage />}/>
+            <Route path="admin" element={
+            <RequireAuth>
+              <Adminpage />
+            </RequireAuth>
+            }/>
 
 
-          <Route path="*" element={<Notfoundpage />}/>
+            <Route path="*" element={<Notfoundpage />}/>
 
-        </Route>
-      </Routes>
-    </AuthProvider>
+          </Route>
+        </Routes>
+      </AuthProvider>
+
   );
 }
 

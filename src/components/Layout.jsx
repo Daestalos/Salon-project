@@ -63,6 +63,7 @@ const Layout = () =>{
                             <CustomLink to='/team' >Команда</CustomLink>
                             <CustomLink to='/about' >О нас</CustomLink>
                             <CustomLink to='/posts'>Новости</CustomLink>
+                            
                             <NavDropdown title={<Users size={25}  color={"white"}/>} id="navbarScrollingDropdown">
                             {
                                 isEmpty(user) ? <NavDropdown.Item as={CustomLink} to='/login' style={{color: "black"}}>Авторизация</NavDropdown.Item> : <NavDropdown.Item as={CustomLink} to={ !user.isadmin ? `/user/${user.id}` : `/admin`} style={{color: "black"}}>{user.name}</NavDropdown.Item>
