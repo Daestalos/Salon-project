@@ -1,6 +1,5 @@
 import { Container, Row, Col, Tabs, Tab, Button } from 'react-bootstrap';
 import { Slider } from '../components/Slider';
-import { Link } from 'react-router-dom';
 import { useAuth } from "../hook/useAuth";
 
 const Servicepage = () =>{
@@ -23,7 +22,7 @@ const Servicepage = () =>{
                     categoryData.filter( category => category.id !== 11472068).map( (category) => (
                         <Tab className='Service-Tab' key={category.id} eventKey={category.id} title={category.title} style={{fontSize: "5.9vw"}} >
                         {
-                            serviceData.filter(e => e.category_id === category.id).map( service =>(
+                            serviceData.filter(e => e.category_id === category.id && e.active).map( service =>(
                             <Row className='w-100 d-flex align-items-end' key={service.id}>
                                 <Col className='col-10 col-md-8'><p>{service.title}</p></Col>
                                 <Col className='col text-center'><p>{`${service.price_min} BYN`}</p></Col>
@@ -38,9 +37,8 @@ const Servicepage = () =>{
         </Row>
         <Row className='h-10'>
             <Col className='text-center mt-2 mb-4'>
-            <Link to={`/regservice/new`}>
-                <Button size="lg" variant="primary">ЗАПИСАТЬСЯ НА УСЛУГИ</Button>{' '}
-            </Link></Col>
+                <Button size="lg" variant="primary" href='https://b339878.yclients.com/company/325582/menu?o='>ЗАПИСАТЬСЯ НА УСЛУГИ</Button>{' '}
+            </Col>
         </Row>
     </Container>
     </>

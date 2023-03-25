@@ -6,11 +6,25 @@ import notfoto from '../pages/img/nofoto.png'
 import { Servicepage } from './Servicepage';
 import { Teampage } from './Teampage';
 import InputMask from 'react-input-mask';
-
+import { useAuth } from "../hook/useAuth";
 import "../Homepage.css";
 
 
 const Homepage = () =>{
+
+    const { serviceData, employeeData } = useAuth();
+
+    let getEmployee = (id) => {
+        return employeeData.filter( item => item.id == id).map( item => item.name)
+    };
+
+    let getTimeFromMins = (seconds) =>  {
+        let minutes = seconds / 60,
+            hours = minutes / 60;
+
+        return `${Math.floor(hours % 24)}ч ${Math.floor(minutes % 60)}м` 
+
+    };
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -22,20 +36,6 @@ const Homepage = () =>{
         .then(function(response) {
             console.log(response.data);
             setPosts(response.data);
-        });
-    }
-
-    const [training, setTraining] = useState([]);
-
-    useEffect(() => {
-        getTraining();
-    }, []);
-
-    function getTraining () {
-        axios.get('http://localhost/api/training.php')
-        .then(function(response) {
-            console.log(response.data);
-            setTraining(response.data);
         });
     }
 
@@ -74,18 +74,18 @@ const Homepage = () =>{
             </Row>
 
             <Accordion>
-                {
-                    training.map( training => (
-                        <Accordion.Item key={training.id} eventKey={training.id}>
-                            <Accordion.Header>{training.title}</Accordion.Header>
-                            <Accordion.Body>
-                                <h2>{`${training.price} BYN`}</h2>
-                                <p>{`Преподаватель мастер ${training.name}`}</p>
-                                <p>{`Продолжительность ${training.length} дня`}</p>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    ))
-                }
+                    {
+                        serviceData.filter(item => item.category_id == 11472068).map( training => (
+                            <Accordion.Item key={training.id} eventKey={training.id}>
+                                <Accordion.Header>{training.title}</Accordion.Header>
+                                <Accordion.Body>
+                                    <h2>{`${training.price_max} BYN`}</h2>
+                                    <p>{`Преподаватель мастер ${getEmployee(training.staff.map( item => item.id))}`}</p>
+                                    <p>{`Продолжительность курса ${getTimeFromMins(training.staff.map( item => item.seance_length))}`}</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        ))
+                    }
             </Accordion>
 
             <Row className='justify-content-center text-center'>
