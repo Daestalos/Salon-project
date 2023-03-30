@@ -1,14 +1,19 @@
 import { Container, Row, Col, Button, Form, Accordion } from 'react-bootstrap';
-import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import notfoto from '../pages/img/nofoto.png'
-import { Servicepage } from './Servicepage';
-import { Teampage } from './Teampage';
-import InputMask from 'react-input-mask';
-import { useAuth } from "../hook/useAuth";
-import "../Homepage.css";
 
+import axios from "axios";
+import InputMask from 'react-input-mask';
+import notfoto from '../pages/img/nofoto.png'
+import "../css/Homepage.css";
+
+// Components
+import { Teampage } from './Teampage';
+import { Slider } from '../components/Slider';
+import { ServiceComponent } from '../components/ServiceComponent';
+import { AboutComponent } from '../components/AboutComponent';
+import { useAuth } from "../hook/useAuth";
+import { SwiperComponent } from '../components/SwiperComponent';
 
 const Homepage = () =>{
 
@@ -26,6 +31,8 @@ const Homepage = () =>{
 
     };
 
+
+
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         getPosts();
@@ -38,6 +45,8 @@ const Homepage = () =>{
             setPosts(response.data);
         });
     }
+
+
 
 
     const [inputs, setInputs] = useState({});
@@ -61,42 +70,63 @@ const Homepage = () =>{
 
 
     return (
-        <>
-            <Servicepage />
+        <>  
+            <Slider />
+            <AboutComponent />
+            <ServiceComponent />
             <Teampage />
 
+
             <Container className='mb-20'>
-            <Row className='h-10'>
-                <Col className='Header text-center'>
-                     
-                    <h1 className="decorated"><span>Наши курсы </span></h1>      
-                </Col>
-            </Row>
+                <Row className='h-10'>
+                    <Col className='Header text-center'>
+                        <h1 className="decorated"><span>Наши курсы </span></h1>      
+                    </Col>
+                </Row>
+                <Accordion>
+                {
+                    serviceData.filter(item => item.category_id == 11472068).map( training => (
+                        <Accordion.Item key={training.id} eventKey={training.id}>
+                            <Accordion.Header>{training.title}</Accordion.Header>
+                            <Accordion.Body>
+                                <h2>{`${training.price_max} BYN`}</h2>
+                                <p>{`Преподаватель мастер ${getEmployee(training.staff.map( item => item.id))}`}</p>
+                                <p>{`Продолжительность курса ${getTimeFromMins(training.staff.map( item => item.seance_length))}`}</p>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    ))
+                }
+                </Accordion>
+                <Row className='justify-content-center text-center'>
+                    <Col className='mb-3 mt-3'>
+                        <Link to={`/training`}>
+                            <Button size="lg" variant="primary">Записаться на курс</Button>{' '}
+                        </Link>
+                    </Col>
+                </Row>
+            </Container>
 
-            <Accordion>
-                    {
-                        serviceData.filter(item => item.category_id == 11472068).map( training => (
-                            <Accordion.Item key={training.id} eventKey={training.id}>
-                                <Accordion.Header>{training.title}</Accordion.Header>
-                                <Accordion.Body>
-                                    <h2>{`${training.price_max} BYN`}</h2>
-                                    <p>{`Преподаватель мастер ${getEmployee(training.staff.map( item => item.id))}`}</p>
-                                    <p>{`Продолжительность курса ${getTimeFromMins(training.staff.map( item => item.seance_length))}`}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        ))
-                    }
-            </Accordion>
+            <SwiperComponent />
 
-            <Row className='justify-content-center text-center'>
-                        <Col className='mb-3 mt-3'>
-                            <Link to={`/training`}>
-                                <Button size="lg" variant="primary">Записаться на курс</Button>{' '}
-                            </Link>
-                        </Col>
-            </Row>
+            
 
-        </Container>
+            
+            <Container className='mb-20' fluid>
+                <Row className='h-10'>
+                    <Col className='Header text-center'>
+                    <h1 className="decorated"><span>Наше местоположение</span></h1> 
+                        
+                    </Col>
+                </Row>
+                <Row>
+                    <Col><iframe
+                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a06fd3012847bdc92446e6e74cd497e7570af1889b25c1726f509d298b583a9&amp;source=constructor"
+                     style={{width: "100%", height: "500px", frameborder: "0"}}
+                     title="myFrame"
+                     />
+                     </Col>
+                </Row>
+            </Container>
 
             <Container className='News mb-20' fluid>
                 <Row className='h-10'>
@@ -138,41 +168,24 @@ const Homepage = () =>{
                     </Row>
             </Container>
 
-            
-            <Container className='mb-20' fluid>
-                <Row className='h-10'>
-                    <Col className='Header text-center'>
-                    <h1 className="decorated"><span>Наше местоположение</span></h1> 
-                        
-                    </Col>
-                </Row>
-                <Row>
-                    <Col><iframe
-                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a06fd3012847bdc92446e6e74cd497e7570af1889b25c1726f509d298b583a9&amp;source=constructor"
-                     style={{width: "100%", height: "500px", frameborder: "0"}}
-                     title="myFrame"
-                     />
-                     </Col>
-                </Row>
-            </Container>
-
             <Container className='Contacts mb-20' fluid>
                 <Row className='h-10'>
                     <Col className='Header text-center'>
                     <h1 className="decorated"><span>Мы рады Вашим вопросам и предложениям </span></h1> 
                     </Col>
                 </Row>
-                <Row className='d-flex justify-content-center h-100'>
-                    <Col className='col-4'>
-                        <Col className='text-center'>НАШИ КОНТАКТЫ</Col>
-                        <Col className=''>
-                        <p>Мы находимся по адресу:</p>
-                        <p>г. Могилев, ул. Первомайская, 2</p>
-                        <p>Наш телефон для связи:</p>
-                        <p>8 (029) 114-11-54</p>
+                <Row className='d-flex flex-column flex-md-row justify-content-center h-100'>
+                    <Col className='col-12 col-md-4 d-flex flex-column d-md-block align-items-center align-items-md-start col-lg-5 col-xxl-4'>
+                        <Col className='Contacts-header text-center'>НАШИ КОНТАКТЫ</Col>
+                        <Col className='Contacts-header mt-3'>
+                            <p>Мы находимся по адресу:</p>
+                            <p>г. Могилев, ул. Первомайская, 2</p>
+                            <p>Наш телефон для связи:</p>
+                            <p>8 (029) 114-11-54</p>
+                            <p>Мы с вами обязательно свяжемся!</p>
+                        </Col>
                     </Col>
-                    </Col>
-                    <Col className='Contacts-Form col-4'>
+                    <Col className='Contacts-Form col-12 col-md-6 col-xxl-4'>
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Ваша почта</Form.Label>

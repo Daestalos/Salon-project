@@ -1,5 +1,5 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import '../index.css';
+import { Container, Row, Col} from 'react-bootstrap';
+import '../css/index.css';
 import { CustomLink } from './CustomLink';
 import {InstagramLogo} from "phosphor-react";
 import logo from '../pages/img/logo1.svg'
@@ -19,8 +19,8 @@ const Footer = () =>{
                             <li><CustomLink to='/service'>Услуги</CustomLink></li>
                             <li><CustomLink to='/team' >Команда</CustomLink></li>
                             <li><CustomLink to='/about' >О нас</CustomLink></li>
+                            <li><CustomLink to='/shop' >Товары</CustomLink></li>
                             <li><CustomLink to='/posts'>Новости</CustomLink></li>
-                            <li><CustomLink to='/login' >Войти</CustomLink></li>
                         </ul>
 
                     </Col>

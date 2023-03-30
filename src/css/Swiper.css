@@ -1,0 +1,83 @@
+
+.Swiper {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: url("https://lafamilia.by/wp-content/uploads/2019/03/barber3_pic10.png");
+}
+
+.Swiper-Header {
+    color: #E4E4E4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.Swiper-Container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.Swiper-Container img{
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.Swiper-Text p{
+    text-indent: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 8em;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, #9e2a5e) !important;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 95%;
+}
+  
+.swiper-slide {
+
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+  
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+/* object-fit: cover; */
+}
+
+@media screen and (min-width: 400px) {
+    .swiper {
+      width: 100%;
+      height: 90%;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .swiper {
+      width: 90%;
+      height: 90%;
+    }
+  }

@@ -17,6 +17,7 @@ import { Editservice } from './cruid/Editservice';
 import { Edituser } from './cruid/Edituser';
 import { Createrecord } from './cruid/Createrecord';
 import { Userpage } from './pages/Userpage';
+import { Shoppage } from './pages/Shoppage';
 
 import { Loginpage } from './pages/Loginpage';
 import { Registerpage } from './pages/Registerpage';
@@ -24,6 +25,7 @@ import { Adminpage } from './pages/Adminpage';
 import { Notfoundpage } from './pages/Notfoundpage';
 
 import { Layout } from './components/Layout';
+
 
 import { RequireAuth } from './hoc/RequireAuth';
 import { AuthProvider } from './hoc/AuthProvider';
@@ -41,13 +43,13 @@ function App() {
             <Route path="service" element={<Servicepage />}/>
             <Route path="team" element={<Teampage />}/>
             <Route path="training" element={<Trainingpage />}/>
-            
+            <Route path="shop" element={<Shoppage />}/>
             <Route path="about" element={<Aboutpage />}/>
 
             <Route path="posts/" element={<Blogpage />}/>
             <Route path="posts/:id" element={<Singlepage />}/>
 
-            <Route path="team/new" element={<RequireAuth><Createmasters /></RequireAuth>}/>
+            {/* <Route path="team/new" element={<RequireAuth><Createmasters /></RequireAuth>}/>
             <Route path="team/:id/edit" element={<RequireAuth><Editmasters /></RequireAuth>}/>
             <Route path="posts/new" element={<RequireAuth><Createpost /></RequireAuth>}/>
             <Route path="posts/:id/edit" element={<RequireAuth><Editpost /></RequireAuth>}/>
@@ -64,7 +66,7 @@ function App() {
             <RequireAuth>
               <Adminpage />
             </RequireAuth>
-            }/>
+            }/> */}
 
 
             <Route path="*" element={<Notfoundpage />}/>

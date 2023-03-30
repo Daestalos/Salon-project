@@ -38,59 +38,72 @@ export const AuthProvider = ({children}) => {
 
     const [employeeData, setEmployee] = useState([]);
     useEffect(() => {
-         getEmployee();
+        function getEmployee () {
+            axios.get('http://localhost:8000/team')
+            .then(function(response) {
+                setEmployee(response.data);
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+        }
+        getEmployee();
     }, []);
 
-    function getEmployee () {
-        axios.get('https://api.yclients.com/api/v1/staff/325582', headers)
-        .then(function(response) {
-            setEmployee(response.data.data);
-        })
-        .catch(function(error) {
-            console.log(error)
-        });
-        
-    }
+
 
     
     // Category
 
     const [categoryData, setCategory] = useState([]);
     useEffect(() => {
+        function getCategory () {
+            axios.get('http://localhost:8000/category')
+            .then(function(response) {
+                setCategory(response.data);
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+        }
         getCategory();
     }, []);
 
-    function getCategory () {
-        axios.get('https://api.yclients.com/api/v1/service_categories/325582', headers)
-        .then(function(response) {
-            console.log(response.data.data);
-            setCategory(response.data.data);
-        })
-        .catch(function(error) {
-            console.log(error)
-        });
-        
-    }
+    //old request
+    // const [categoryData, setCategory] = useState([]);
+    // useEffect(() => {
+    //     function getCategory () {
+    //         axios.get('https://api.yclients.com/api/v1/service_categories/325582', headers)
+    //         .then(function(response) {
+    //             setCategory(response.data.data);
+    //         })
+    //         .catch(function(error) {
+    //             console.log(error)
+    //         });
+    //     }
+    //     getCategory();
+    // }, []);
 
 
-        // Services
 
-        const [serviceData, setService] = useState([]);
-        useEffect(() => {
-            getService();
-        }, []);
-    
+    // Services
+
+    const [serviceData, setService] = useState([]);
+    useEffect(() => {
         function getService () {
-            axios.get('https://api.yclients.com/api/v1/services/325582', headers)
+            axios.get('http://localhost:8000/service')
             .then(function(response) {
-                console.log(response.data.data);
-                setService(response.data.data);
+                setService(response.data);
             })
             .catch(function(error) {
                 console.log(error)
             });
             
         }
+        getService();
+    }, []);
+    
+
 
 
 

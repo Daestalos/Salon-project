@@ -1,0 +1,58 @@
+
+.Team {
+    background-attachment: fixed;
+    background-image: url(https://brock.by/wp-content/uploads/2020/03/brock_01.jpg);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.Team-Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+.Team-container{
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+    background: white;
+}
+
+.Team-container img{
+    max-width: 60%;
+    border-radius: 50%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.Team-person{
+    position: relative;
+    bottom: 20%;
+    margin-bottom: 20px;
+}
+
+
+.Team-person h4{
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.Team-person a{
+    margin-top: 20px;
+    --bs-btn-padding-x: 1.75rem;
+    --bs-btn-padding-y: 0.675rem;
+}
+
+.Team-person a:hover{
+text-decoration: none;
+}

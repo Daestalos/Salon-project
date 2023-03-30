@@ -1,0 +1,40 @@
+
+.Service {
+    height: auto;
+    margin-bottom: 30px;
+}
+
+
+.Service .nav-tabs .nav-link.active {
+    color: #fafaff;
+    background-color: #b40051;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.Service .nav-link {
+    color: #000000;
+}
+
+.Service p{
+    font-size: 1.2rem;
+    border-bottom: 1.5px solid;  
+}
+
+.Service-Tab ul,li{
+    font-size: 1.2rem;
+}
+
+@media(max-width: 1000px) {
+    .Service p{
+        font-size: 1rem;
+    }
+ 
+}
+
+@media(max-width: 500px) {
+    .nav-item{
+        width: 100vw;
+        font-size: 1rem;
+    }
+ 
+}

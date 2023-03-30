@@ -1,0 +1,42 @@
+.About {
+    height: 570px;
+}
+
+.About-content p {
+    font-size: 18px;
+}
+
+.About-SVG {
+    height: 160px;
+    width: 250px;
+    padding: 0 1rem;
+}
+
+.About-container{
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+    background: white; 
+}
+
+.About-container img {
+    max-width: 200px;
+}
+
+@media(max-width: 800px) {
+    .About-content p {
+        font-size: 1.2em;
+    }
+ 
+}
+
+@media(max-width: 500px) {
+    .About-content p {
+        font-size: 0.9em;
+    }
+ 
+}

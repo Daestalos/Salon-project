@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import "../Homepage.css";
+import "../css/Homepage.css";
 import notfoto from '../pages/img/nofoto.png'
 import { Slider } from "../components/Slider";
 
@@ -52,23 +52,6 @@ const Blogpage = () =>{
 
                         </Col>
                     </Col>
-
-
-                    // <Col className="col-6">
-                    // {/* <Col className=" mb-5 col-9 col-sm-5 col-md-4 col-xl-4" sm={{ height: "300px"}}> */}
-                    // <div className="Blogpage-News-container">
-                    //     <img src={post.img === null ? notfoto : post.img} alt="employee" />
-                    //     <div className='News-person'>
-                    //         <h4>{post.header}</h4>
-                    //         <p>{post.text}</p>
-                    //         <div className='News-button d-flex justify-content-center'>
-                    //             <Link key={post.id} to={`/posts/${post.id}`}>
-                    //                 <Button variant="primary">Узнать больше</Button>{' '}
-                    //             </Link>
-                    //         </div>
-                    //     </div>
-                    // </div>
-                    // </Col>
                 ))
             }
             </Row>
