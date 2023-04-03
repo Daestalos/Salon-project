@@ -5,20 +5,11 @@ import { Container, Row, Col, Button} from 'react-bootstrap';
 import "../css/Homepage.css";
 import notfoto from '../pages/img/nofoto.png'
 import { Slider } from "../components/Slider";
+import { useAuth } from "../hook/useAuth";
+import Ratio from 'react-bootstrap/Ratio';
 
 const Blogpage = () =>{
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        getPosts();
-    }, []);
-
-    function getPosts () {
-        axios.get('http://localhost/api/news.php')
-        .then(function(response) {
-            console.log(response.data);
-            setPosts(response.data);
-        });
-    }
+    const {mediaData} = useAuth();
 
     return (
         <>
@@ -30,30 +21,19 @@ const Blogpage = () =>{
                 </Col>
                 
             </Row>
-            <Row className='Blogpage-News d-md-flex justify-content-center justify-content-sm-around align-items-start h-100'>
-            {
-                posts.map(post => (
-                    <Col className="Blogpage-News-Container col-10 col-sm-11 col-md-11 col-lg-5 d-flex justify-content-sm-start flex-sm-row flex-column m-2" style={{border: "1px solid black", background: "white"}} >
-                        <Col className="Blogpage-News-Container d-flex d-sm-block justify-content-center col-12 col-sm-6 col-lg-6" xxl={{height: "400px"}}>
-                            <img src={post.img === null ? notfoto : post.img} alt="employee" />
-                        </Col>
-                        <Col className="col-12 col-sm-6" xxl={{height: "400px", overflow: "hidden"}}>
-                            <Col className="d-flex justify-content-center align-items-center text-center" style={{maxWidth: "100%", height: "30%"}}>
-                                <h4>{post.header}</h4>
-                            </Col>
-                            <Col className="Blogpage-News-Text d-flex justify-content-start m-2" style={{maxWidth: "100%", height: "50%"}}>
-                                <p>{post.text}</p>
-                            </Col>
-                            <Col className="d-flex col-12 justify-content-center pb-2 p-sm-2 justify-content-md-end me-5" style={{maxWidth: "100%", height: "20%"}}>
-                                <Link key={post.id} to={`/posts/${post.id}`}>
-                                    <Button variant="primary">Узнать больше</Button>{' '}
-                                </Link>
-                            </Col>
-
-                        </Col>
-                    </Col>
-                ))
-            }
+            <Row className='Blogpage-News d-md-flex justify-content-start justify-content-sm-around align-items-start h-100'>
+            <Col className="col-4">
+            {/* <iframe src='https://video-iad3-1.cdninstagram.com/o1/v/t16/f1/m82/C645473191879CA5434BE674B3BAB48A_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&_nc_ht=video-iad3-1.cdninstagram.com&_nc_cat=103&vs=1880091879016830_4035598109&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9DNjQ1NDczMTkxODc5Q0E1NDM0QkU2NzRCM0JBQjQ4QV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0tSQU9SUjhwTk9qN3VnQkFCOXFDamo5UFhrWGJxX0VBQUFGFQICyAEAKAAYABsBiAd1c2Vfb2lsATEVAAAm6s2z1u%2Ff9D8VAigCQzMsF0AzCj1wo9cKGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHUAAA%3D%3D&ccb=9-4&oh=00_AfDW3BdRi4DVBG9OSrr_SLH57NgkN-4qWmJa7q_q7CB8eA&oe=642BF187&_nc_sid=ea0b6e&_nc_rid=25c076a408'
+                    frameBorder='0'
+                    allow='encrypted-media'
+                    allowFullScreen
+                    title='video'
+                    style={{width: "100%", height: "500px"}}
+            /> */}
+            <Ratio aspectRatio="4x3">
+                <iframe autoplay loop src="https://video-iad3-1.cdninstagram.com/o1/v/t16/f1/m82/C645473191879CA5434BE674B3BAB48A_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&_nc_ht=video-iad3-1.cdninstagram.com&_nc_cat=103&vs=1880091879016830_4035598109&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9DNjQ1NDczMTkxODc5Q0E1NDM0QkU2NzRCM0JBQjQ4QV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0tSQU9SUjhwTk9qN3VnQkFCOXFDamo5UFhrWGJxX0VBQUFGFQICyAEAKAAYABsBiAd1c2Vfb2lsATEVAAAm6s2z1u%2Ff9D8VAigCQzMsF0AzCj1wo9cKGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHUAAA%3D%3D&ccb=9-4&oh=00_AfDW3BdRi4DVBG9OSrr_SLH57NgkN-4qWmJa7q_q7CB8eA&oe=642BF187&_nc_sid=ea0b6e&_nc_rid=25c076a408" style={{width: "100%", height: "100%"}} />
+            </Ratio>    
+            </Col>
             </Row>
         </Container>
         </>

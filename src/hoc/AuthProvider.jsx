@@ -24,16 +24,6 @@ export const AuthProvider = ({children}) => {
 
     }
 
-
-    // headers for API
-    const headers = {
-        headers: {
-        'authorization': '8tnetbafey7fsjchspfb',
-        'Accept': "application/vnd.api.v2+json"
-        }
-    }
-
-
     // Employees
 
     const [employeeData, setEmployee] = useState([]);
@@ -69,23 +59,6 @@ export const AuthProvider = ({children}) => {
         getCategory();
     }, []);
 
-    //old request
-    // const [categoryData, setCategory] = useState([]);
-    // useEffect(() => {
-    //     function getCategory () {
-    //         axios.get('https://api.yclients.com/api/v1/service_categories/325582', headers)
-    //         .then(function(response) {
-    //             setCategory(response.data.data);
-    //         })
-    //         .catch(function(error) {
-    //             console.log(error)
-    //         });
-    //     }
-    //     getCategory();
-    // }, []);
-
-
-
     // Services
 
     const [serviceData, setService] = useState([]);
@@ -103,12 +76,28 @@ export const AuthProvider = ({children}) => {
         getService();
     }, []);
     
+    // Instagram posts
+
+    const [mediaData, setMediaData] = useState([]);
+    useEffect(() => {
+        function getService () {
+            axios.get('http://localhost:8000/news')
+            .then(function(response) {
+                console.log(response.data);
+                setMediaData(response.data);
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+            
+        }
+        getService();
+    }, []);
 
 
 
 
-
-    const value = {user, signin, signout, employeeData, categoryData, serviceData}
+    const value = {user, signin, signout, employeeData, categoryData, serviceData, mediaData}
 
 
     return <AuthContext.Provider value={value}>

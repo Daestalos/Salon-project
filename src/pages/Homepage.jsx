@@ -17,7 +17,7 @@ import { SwiperComponent } from '../components/SwiperComponent';
 
 const Homepage = () =>{
 
-    const { serviceData, employeeData } = useAuth();
+    const { serviceData, employeeData, mediaData } = useAuth();
 
     let getEmployee = (id) => {
         return employeeData.filter( item => item.id == id).map( item => item.name)
@@ -32,30 +32,12 @@ const Homepage = () =>{
     };
 
 
-
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        getPosts();
-    }, []);
-
-    function getPosts () {
-        axios.get('http://localhost/api/news.php')
-        .then(function(response) {
-            console.log(response.data);
-            setPosts(response.data);
-        });
-    }
-
-
-
-
     const [inputs, setInputs] = useState({});
     const [answer, setAnswer] = useState('');
 
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-    
         setInputs(values => ({...values, [name]: value}));
     }
     

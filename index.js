@@ -63,6 +63,20 @@ app.get('/category', (req, res) =>{
     });
 })
 
+app.get('/news', (req, res) => {
+    axios.get(`https://graph.instagram.com/me/media?fields=${process.env.REACT_APP_INSTAGRAM_FIELDS}&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN}&limit=1`, {
+        headers: {'Accept-Encoding': 'gzip,deflate,compress'}
+    }
+    )
+    .then(function(response) {
+        console.log(response.data.data);
+        res.json(response.data.data);
+    })
+    .catch(function(error) {
+        console.log(error)
+    });
+})
+
 
 app.listen(PORT, () => {
     console.log(`Backend is running on ${PORT}`);
