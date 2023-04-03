@@ -64,7 +64,7 @@ app.get('/category', (req, res) =>{
 })
 
 app.get('/news', (req, res) => {
-    axios.get(`https://graph.instagram.com/me/media?fields=${process.env.REACT_APP_INSTAGRAM_FIELDS}&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN}&limit=1`, {
+    axios.get(`https://graph.instagram.com/me/media?fields=${process.env.REACT_APP_INSTAGRAM_FIELDS}&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN}&limit=15`, {
         headers: {'Accept-Encoding': 'gzip,deflate,compress'}
     }
     )

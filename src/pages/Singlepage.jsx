@@ -1,30 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import axios from 'axios';
 import { Slider } from "../components/Slider";
 
 const Singlepage = () =>{
 
-const {id} = useParams();
-const [post, setInputs] = useState({})
-
-useEffect(() => {
-    getPosts();
-});
-
-
-function getPosts () {
-    axios.get(`http://localhost/api/news.php/${id}`)
-    .then(function(response) {
-    console.log(response.data);
-    setInputs(response.data);
-    });
-}
-
 return (
 <>
-    <Slider />
+    {/* <Slider />
     
     {post && (
     <>
@@ -49,7 +32,7 @@ return (
             </Row>
         </Container>
     </>
-    )}
+    )} */}
 
 
 

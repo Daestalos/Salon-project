@@ -2,7 +2,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import '../css/index.css';
 import { CustomLink } from './CustomLink';
 import {InstagramLogo} from "phosphor-react";
-import logo from '../pages/img/logo1.svg'
+import logo from '../pages/img/logo.svg'
 
 const Footer = () =>{
     return (
@@ -44,7 +44,7 @@ const Footer = () =>{
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='text-center' style={{color: "white"}}>© BAR STUDIO — 2022. Все права защищены</Col>
+                    <Col className='text-center' style={{color: "white"}}>© BAR STUDIO — 2023. Все права защищены</Col>
                 </Row>
             </Container>
         </>

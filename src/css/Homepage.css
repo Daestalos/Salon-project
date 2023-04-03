@@ -2,7 +2,8 @@
 @import "About.css";
 @import "Service.css";
 @import "Team.css";
-
+@import "SwiperInstagram.css";
+@import "Modal.css";
 
 
 @font-face {
@@ -27,7 +28,9 @@ body {
     body {
       margin-top: 115px;
     }
-  }
+}
+
+
 
 :root {
     /* --color-bg: #212529; */
@@ -42,6 +45,7 @@ body {
     --bs-btn-hover-bg: #202021;
     --bs-btn-hover-border-color: #000000;
 }
+
 .carousel {
     padding-left: 0;
     padding-right: 0;

@@ -5,7 +5,7 @@ import { Teampage } from './Teampage';
 import medal from './img/medal.svg';
 import coffee from './img/coffee-cup.svg';
 import best from './img/best-friend.svg';
-
+import { SwiperComponent } from '../components/SwiperComponent';
 
 const Aboutpage = () =>{
     return (
@@ -51,6 +51,7 @@ const Aboutpage = () =>{
 
             </Row>
         </Container>
+        <SwiperComponent />
         </>
     )
 }

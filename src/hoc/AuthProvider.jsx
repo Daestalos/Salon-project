@@ -9,21 +9,6 @@ export const AuthContext = createContext(null);
 // hoc для обеспечения информацией зарегистрирован пользователь или нет
 export const AuthProvider = ({children}) => {
 
-    const [user, setUsers] = useState({});
-    const navigate = useNavigate();
-
-    const signin = (newUser, cb) => {
-        setUsers(newUser);
-        cb();
-    }
-
-    const signout = (cb) => {
-        setUsers({});
-        navigate('/', {replace: true});
-        cb();
-
-    }
-
     // Employees
 
     const [employeeData, setEmployee] = useState([]);
@@ -95,9 +80,7 @@ export const AuthProvider = ({children}) => {
     }, []);
 
 
-
-
-    const value = {user, signin, signout, employeeData, categoryData, serviceData, mediaData}
+    const value = {employeeData, categoryData, serviceData, mediaData}
 
 
     return <AuthContext.Provider value={value}>

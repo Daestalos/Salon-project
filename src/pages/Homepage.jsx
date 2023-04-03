@@ -2,9 +2,7 @@ import { Container, Row, Col, Button, Form, Accordion } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import axios from "axios";
 import InputMask from 'react-input-mask';
-import notfoto from '../pages/img/nofoto.png'
 import "../css/Homepage.css";
 
 // Components
@@ -14,10 +12,11 @@ import { ServiceComponent } from '../components/ServiceComponent';
 import { AboutComponent } from '../components/AboutComponent';
 import { useAuth } from "../hook/useAuth";
 import { SwiperComponent } from '../components/SwiperComponent';
+import { SwiperInstagram } from '../components/SwiperInstagram';
 
 const Homepage = () =>{
 
-    const { serviceData, employeeData, mediaData } = useAuth();
+    const { serviceData, employeeData} = useAuth();
 
     let getEmployee = (id) => {
         return employeeData.filter( item => item.id == id).map( item => item.name)
@@ -116,36 +115,12 @@ const Homepage = () =>{
                             <h1 className="decorated-white"><span>Новости BAR Studio</span></h1>    
                         </Col>
                     </Row>
-                    <Row className='News d-md-flex justify-content-center justify-content-sm-start align-items-start h-80'>
-                        
-                    {
-                    posts.slice(-3).map(post => (
-                        <Col className=" mb-5 col-12 col-sm-6 col-md-4 col-xl-4" sm={{ height: "300px"}}>
-                        <div className="News-container">
-                            <Col className='d-flex justify-content-center p-5'>
-                                <img src={post.img === null ? notfoto : post.img} alt="employee" />
-                            </Col>
-                            
-                            <div className='News-person'>
-                                <h4>{post.header}</h4>
-                                <p>{post.text.slice(0, 100) + ' ...'}</p>
-                                <div className='News-button d-flex justify-content-center pb-4'>
-                                    <Link key={post.id} to={`/posts/${post.id}`}>
-                                        <Button variant="primary">Узнать больше</Button>{' '}
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        </Col>
-                    ))
-                    }
 
-                    </Row>
+                    <SwiperInstagram />
+
                     <Row className='justify-content-center text-center'>
-                        <Col className='mb-5'>
-                            <Link to={`/posts`}>
-                                <Button size="lg" variant="primary">Читайте все новости</Button>{' '}
-                            </Link>
+                        <Col className='mb-5 pt-4'>
+                                <Button href="https://www.instagram.com/bar_studio.mogilev/?hl=ru" size="lg" variant="primary">Следите за нами в Instagram!</Button>{' '}
                         </Col>
                     </Row>
             </Container>
