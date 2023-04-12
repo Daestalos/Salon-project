@@ -3,6 +3,9 @@
     font-size: 1.2vw
 }
 
+
+
+
 @media(min-width: 992px){
     .modal-lg, .modal-xl {
        --bs-modal-width: 500px !important;

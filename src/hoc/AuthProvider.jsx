@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect} from "react";
-import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -9,12 +8,13 @@ export const AuthContext = createContext(null);
 // hoc для обеспечения информацией зарегистрирован пользователь или нет
 export const AuthProvider = ({children}) => {
 
+    const url = `http://localhost:8000/`
     // Employees
 
     const [employeeData, setEmployee] = useState([]);
     useEffect(() => {
         function getEmployee () {
-            axios.get('http://localhost:8000/team')
+            axios.get(`http://localhost:8000/team`)
             .then(function(response) {
                 setEmployee(response.data);
             })

@@ -45,9 +45,12 @@ const SwiperInstagram = () =>{
                         400: {
                             slidesPerView: 3,
                         },
-                        768: {
-                          slidesPerView: 5,
+                        768:{
+                            slidesPerView: 3,
                         },
+                        1100: {
+                          slidesPerView: 4,
+                        }
                       }}
 
                 >
@@ -59,7 +62,7 @@ const SwiperInstagram = () =>{
                                 <img src={item.hasOwnProperty('thumbnail_url') ? item.thumbnail_url : item.media_url} alt={item.id} onClick={() => {
                                     setModalShow(true)
                                     setModalProps([item.permalink, item.media_url, item.caption, item.media_type, item.id]);
-                                }}/>
+                                }}/>a
 
                             </SwiperSlide>
                         ))
