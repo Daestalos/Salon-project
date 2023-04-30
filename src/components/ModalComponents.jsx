@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 const ModalComponents = (props) => {
   
     let [permalink, media_url, caption, media_type,id] = props.instagrammedia;
-    console.log(media_type);
     return(
     <Modal
 
@@ -29,7 +28,7 @@ const ModalComponents = (props) => {
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-center">
         <Button href={permalink}>Перейти к записи</Button>
-        <Button onClick={props.onHide}>Закрыть</Button>
+        {/* <Button onClick={props.onHide}>Закрыть</Button> */}
       </Modal.Footer>
     </Modal>
     );

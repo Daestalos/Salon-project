@@ -43,10 +43,14 @@ const Homepage = () =>{
     const handleSubmit = (event) =>{
         event.preventDefault();
 
+        
+
         setAnswer('Ваше сообщение успешно отправлено! В скором времени с вами свяжутся.');
         setTimeout(() => {
             setAnswer('');
         }, 5000);
+        console.log(inputs);
+
     }
 
 
@@ -89,9 +93,7 @@ const Homepage = () =>{
 
             <SwiperComponent />
 
-            
 
-            
             <Container className='mb-20' fluid>
                 <Row className='h-10'>
                     <Col className='Header text-center'>
@@ -146,19 +148,19 @@ const Homepage = () =>{
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Ваша почта</Form.Label>
-                                <Form.Control type="email" placeholder="Почта для связи с вами" required onChange={handleChange}/>
+                                <Form.Control name="email" type="email" placeholder="Почта для связи с вами" required onChange={handleChange}/>
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPhone">
                                 <Form.Label>Ваш телефон</Form.Label>
-                                <Form.Control as={InputMask} type="tel" mask="8(999) 999-99-99" placeholder="(029) 111-11-11" required onChange={handleChange}/>
+                                <Form.Control as={InputMask} name="tel" type="tel" mask="8(999) 999-99-99" placeholder="(029) 111-11-11" required onChange={handleChange}/>
                                 <Form.Text className="text-muted">
                                 Телефон для связи с вами
                                 </Form.Text>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicText">
                                 <Form.Label>Ваше сообщение</Form.Label>
-                                <Form.Control type="text" placeholder="Хочу уточнить вас о услуге..." required onChange={handleChange}/>
+                                <Form.Control name="text" type="text" placeholder="Хочу уточнить вас о услуге..." required onChange={handleChange}/>
                             </Form.Group>
                             <Form.Group className="d-flex justify-content-center" controlId="formBasicText">
                                 <Button variant="primary" type="submit" className='m-3'>

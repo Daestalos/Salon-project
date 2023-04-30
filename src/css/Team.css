@@ -27,10 +27,11 @@
 }
 
 .Team-container img{
-    max-width: 60%;
+    width: 190px;
     border-radius: 50%;
     height: 100%;
     margin-top: 30px;
+    height: auto;
 }
 
 .Team-person{
@@ -38,7 +39,6 @@
     bottom: 20%;
     margin-bottom: 20px;
 }
-
 
 .Team-person h4{
     color: black;
@@ -55,4 +55,27 @@
 
 .Team-person a:hover{
 text-decoration: none;
+}
+
+@media screen and (min-width: 200px) {
+    .Team-container{
+        width: 107%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .Team-container{
+        width: 90%;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .Team-container img{
+        width: 190px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .Team-container img{
+        width: 230px;
+    }
 }

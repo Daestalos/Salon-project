@@ -36,8 +36,8 @@ const Layout = () =>{
 
             <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top" className="Top-Header-nav d-lg-none d-block">
                 <Container fluid>
-                    <Navbar.Brand to="/" className="ms-5">BAR STUDIO</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav " id="Close" className="me-5" style={{border: "none", boxShadow: "none"}}/>
+                    <Navbar.Brand to="/" className="ms-4" style={{fontWeight: "500", fontSize: "20px"}}>BAR STUDIO</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav " id="Close" className="me-3" style={{border: "none", boxShadow: "none"}}/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mt-1 d-flex text-center " style={{height: "100svh"}}>
                             <CustomLink to='/' onClick={ () => handleClick()}><House size={32} color={"white"} style={{marginTop :"-4px"}}/> Главная</CustomLink>

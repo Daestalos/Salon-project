@@ -61,17 +61,18 @@ const SwiperComponent = () =>{
                       }}
 
                 >
-                    <SwiperSlide><img src={Slide1} alt="ikko" /></SwiperSlide>
-                    <SwiperSlide><img src={Slide2} alt="Dr.Sorbie" /></SwiperSlide>
                     <SwiperSlide><img src={Slide3} alt="HADAT Cosmetics" /></SwiperSlide>
-                    <SwiperSlide><img src={Slide4} alt="Provida Organic" /></SwiperSlide>
+                    <SwiperSlide><img src={Slide2} alt="Dr.Sorbie" /></SwiperSlide>
                     <SwiperSlide><img src={Slide5} alt="K18 BIOMIMETIC HAIRSCIENCE" /></SwiperSlide>
+                    <SwiperSlide><img src={Slide11} alt="Tangle Teezer" /></SwiperSlide>
                     <SwiperSlide><img src={Slide6} alt="ALFAPARF MILANO" /></SwiperSlide>
+                    <SwiperSlide><img src={Slide4} alt="Provida Organic" /></SwiperSlide>   
                     <SwiperSlide><img src={Slide7} alt="ZOOM Cosmetics" /></SwiperSlide>
                     <SwiperSlide><img src={Slide8} alt="LIMBA Cosmetics" /></SwiperSlide>
                     <SwiperSlide><img src={Slide9} alt="OLLIN Proffesional" /></SwiperSlide>
                     <SwiperSlide><img src={Slide10} alt="Fanola" /></SwiperSlide>
-                    <SwiperSlide><img src={Slide11} alt="Tangle Teezer" /></SwiperSlide>
+                    <SwiperSlide><img src={Slide1} alt="ikko" /></SwiperSlide>
+                    
                 </Swiper>
             </Col>
         </Row>

@@ -5,16 +5,28 @@ import axios from "axios";
 // контекст
 export const AuthContext = createContext(null);
 
-// hoc для обеспечения информацией зарегистрирован пользователь или нет
+// hoc для обеспечения информацией всех страниц сайта
 export const AuthProvider = ({children}) => {
 
-    const url = `http://localhost:8000/`
+    //const url = `http://localhost:8000`
+    const url = `https://back.barstudio.by`
+
+
+    // Email
+
+    const [mail, setMail] = useState({});
+
+    const sendMail = (formMail) => {
+        setMail(formMail);
+    }
+
+
     // Employees
 
     const [employeeData, setEmployee] = useState([]);
     useEffect(() => {
         function getEmployee () {
-            axios.get(`http://localhost:8000/team`)
+            axios.get(`${url}/team`)
             .then(function(response) {
                 setEmployee(response.data);
             })
@@ -33,7 +45,7 @@ export const AuthProvider = ({children}) => {
     const [categoryData, setCategory] = useState([]);
     useEffect(() => {
         function getCategory () {
-            axios.get('http://localhost:8000/category')
+            axios.get(`${url}/category`)
             .then(function(response) {
                 setCategory(response.data);
             })
@@ -49,7 +61,7 @@ export const AuthProvider = ({children}) => {
     const [serviceData, setService] = useState([]);
     useEffect(() => {
         function getService () {
-            axios.get('http://localhost:8000/service')
+            axios.get(`${url}/service`)
             .then(function(response) {
                 setService(response.data);
             })
@@ -66,9 +78,8 @@ export const AuthProvider = ({children}) => {
     const [mediaData, setMediaData] = useState([]);
     useEffect(() => {
         function getService () {
-            axios.get('http://localhost:8000/news')
+            axios.get(`${url}/news`)
             .then(function(response) {
-                console.log(response.data);
                 setMediaData(response.data);
             })
             .catch(function(error) {

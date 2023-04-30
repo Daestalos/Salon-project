@@ -6,7 +6,7 @@ import logo from '../pages/img/logo2.svg'
 const AboutComponent = () =>{
     return (
         <Container className='About mb-20 d-flex align-items-center' fluid>
-            <Row className='About-content col-12 d-flex justify-content-center'>
+            <Row className='About-content col-12 d-flex justify-content-center m-0'>
                 <Col className='d-flex justify-content-center col-12'>
                     <img className='About-SVG align-self-center' src={logo} alt=''/>
                 </Col>
