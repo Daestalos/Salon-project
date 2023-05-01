@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button, Form, Accordion } from 'react-bootstrap';
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 
 import InputMask from 'react-input-mask';
@@ -16,7 +16,7 @@ import { SwiperInstagram } from '../components/SwiperInstagram';
 
 const Homepage = () =>{
 
-    const { serviceData, employeeData} = useAuth();
+    const { serviceData, employeeData, setMail, mail, sendMail} = useAuth();
 
     let getEmployee = (id) => {
         return employeeData.filter( item => item.id == id).map( item => item.name)
@@ -30,27 +30,26 @@ const Homepage = () =>{
 
     };
 
+    // Send Mail
 
-    const [inputs, setInputs] = useState({});
     const [answer, setAnswer] = useState('');
 
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}));
+        setMail(values => ({...values, [name]: value}));
     }
     
     const handleSubmit = (event) =>{
         event.preventDefault();
+        mail['subject'] = 'Обратная связь. Вопрос/Предложение'
 
-        
-
+        sendMail();
         setAnswer('Ваше сообщение успешно отправлено! В скором времени с вами свяжутся.');
+
         setTimeout(() => {
             setAnswer('');
-        }, 5000);
-        console.log(inputs);
-
+        }, 10000);
     }
 
 

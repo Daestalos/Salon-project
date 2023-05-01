@@ -1,12 +1,55 @@
-const PORT = 8080; // 8000 for local
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0
+const PORT = process.env.PORT || 8080;
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const nodemailer = require("nodemailer");
+const bodyParser = require('body-parser')
+
 require('dotenv').config();
 
 const app = express();
 
 app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+
+app.get('/', (req, res) =>{
+    res.set('Content-Type', 'text/html; charset=utf-8');
+    res.send("<h1>Hi</h1>")
+})
+
+
+app.post('/email', (req, res) =>{
+    async function main() {
+        let data = req.body;
+        console.log(data);
+        let transporter = nodemailer.createTransport({
+            host: "smtp.mail.ru", 
+            port: 465, 
+            secure: true, 
+            auth: {
+              user: "veronika.martinkova@mail.ru", 
+              pass: process.env.REACT_APP_MAIL_PASS, 
+            },
+        });
+          
+        let info = await transporter.sendMail({
+            from: `BAR Studio web mail <veronika.martinkova@mail.ru>`,
+            to: "veronika.martinkova@mail.ru",
+            subject: `${data.subject}`,
+            text: `
+            Email пользователя: ${data.email}
+            Телефон для связи: ${data.tel}
+            Текст: ${data.text}`
+          });
+        
+          console.log(info.messageId);
+        }
+        
+        main().catch(err => res.status(400).send({ error: 'Something failed!' }));
+})
 
 app.get('/service', (req, res) =>{
     axios.get('https://api.yclients.com/api/v1/services/325582', {
@@ -24,6 +67,7 @@ app.get('/service', (req, res) =>{
         console.log(error)
     });
 })
+
 
 app.get('/team', (req, res) =>{
 

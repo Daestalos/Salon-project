@@ -16,8 +16,17 @@ export const AuthProvider = ({children}) => {
 
     const [mail, setMail] = useState({});
 
-    const sendMail = (formMail) => {
-        setMail(formMail);
+    const sendMail = () => {
+        if (mail.email && mail.tel && mail.text){
+            axios.post(`${url}/email`, mail)
+            .then(function(response){
+                console.log(`respon`);
+                console.log(response);
+            }).catch(function(error) {
+                console.log('err');
+                console.log(error)
+            });
+        }
     }
 
 
@@ -91,7 +100,7 @@ export const AuthProvider = ({children}) => {
     }, []);
 
 
-    const value = {employeeData, categoryData, serviceData, mediaData}
+    const value = {employeeData, categoryData, serviceData, mediaData, setMail, mail, sendMail}
 
 
     return <AuthContext.Provider value={value}>
