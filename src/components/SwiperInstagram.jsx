@@ -58,7 +58,7 @@ const SwiperInstagram = () =>{
                     {
                         mediaData.map(item => (
                             <SwiperSlide className='swiper-slide-instagram' key={item.id}>
-                                <img src={InstaReels} className='Swiper-svg-instagram'></img>
+                                <img src={InstaReels} className='Swiper-svg-instagram' alt='Бар студио примеры работ'></img>
                                 <img src={item.hasOwnProperty('thumbnail_url') ? item.thumbnail_url : item.media_url} alt={item.id} onClick={() => {
                                     setModalShow(true)
                                     setModalProps([item.permalink, item.media_url, item.caption, item.media_type, item.id]);

@@ -10,7 +10,7 @@ const ServiceComponent = () =>{
         <Container className='Service'>
         <Row className='h-10'>
             <Col className='Header d-flex text-center justify-content-center'>
-                <h1 className="decorated"><span>Наши услуги</span></h1> 
+                <h2 className="decorated"><span>Наши услуги</span></h2> 
             </Col>
         </Row>
         <Row className='h-80'>

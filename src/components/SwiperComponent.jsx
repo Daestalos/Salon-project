@@ -31,7 +31,7 @@ const SwiperComponent = () =>{
         <Container className='Swiper mb-20' fluid>
         <Row className='h-10'>
             <Col className='News-Header text-center'> 
-            <h1 className="decorated"><span>Бренды, с которыми мы работаем</span></h1> 
+            <h2 className="decorated"><span>Бренды, с которыми мы работаем</span></h2> 
             </Col>
             
         </Row>
