@@ -13,7 +13,7 @@ const Blogpage = () =>{
         <Container className='Blogpage-News mb-20' fluid>
             <Row className='h-10'>
                 <Col className='News-Header text-center'> 
-                <h1 className="decorated"><span>Последние новости BAR Studio</span></h1> 
+                <h2 className="decorated"><span>Последние новости BAR Studio</span></h2> 
                 </Col> 
             </Row>
             <SwiperInstagram />

@@ -8,7 +8,7 @@ const Teampage = () =>{
 
         <Container className='Team mb-20' fluid>
         <Row className='h-10'>
-            <Col className='Team-Header text-center'><h1 className="decorated-white"><span>Наша команда</span></h1> </Col>
+            <Col className='Team-Header text-center'><h2 className="decorated-white"><span>Наша команда</span></h2> </Col>
         </Row>
 
         <Row className='Team d-md-flex justify-content-center justify-content-sm-around  text-center h-80'>

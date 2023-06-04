@@ -15,9 +15,7 @@ import { AuthProvider } from './hoc/AuthProvider';
 
 function App() {
   return (
-
       <AuthProvider>
-
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Homepage />}/>

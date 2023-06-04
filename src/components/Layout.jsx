@@ -18,17 +18,17 @@ const Layout = () =>{
             <Container className="Top-Header" fluid>
                 <Row className="h-100 d-none d-lg-flex ">
                     <Col className="Top-Header-Content col-5 d-flex justify-content-start align-items-center">
-                        <CustomLink to='/'>Главная</CustomLink>
-                        <CustomLink to='/service'>Услуги</CustomLink>
-                        <CustomLink to='/team' >Команда</CustomLink>
+                        <CustomLink to='/' onClick={ () => handleClick()}>Главная</CustomLink>
+                        <CustomLink to='/service' onClick={ () => handleClick()}>Услуги</CustomLink>
+                        <CustomLink to='/team' onClick={ () => handleClick()}>Команда</CustomLink>
                     </Col>
                     <Col className="Top-Header-Content col-2">
                         <img src={logo} style={{height: "115px", width: "175px", padding: "0 1rem", marginTop: "5px"}} alt=''/>    
                     </Col>
                     <Col className="Top-Header-Content col-5 d-flex justify-content-end align-items-center">
-                        <CustomLink to='/shop'>Товары</CustomLink>
-                        <CustomLink to='/posts'>Новости</CustomLink>
-                        <CustomLink to='/about' >О нас</CustomLink>
+                        <CustomLink to='/shop' onClick={ () => handleClick()}>Товары</CustomLink>
+                        <CustomLink to='/posts' onClick={ () => handleClick()}>Новости</CustomLink>
+                        <CustomLink to='/about' onClick={ () => handleClick()}>О нас</CustomLink>
                         
                     </Col>
                 </Row>

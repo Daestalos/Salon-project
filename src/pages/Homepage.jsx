@@ -64,7 +64,7 @@ const Homepage = () =>{
             <Container className='mb-20'>
                 <Row className='h-10'>
                     <Col className='Header text-center'>
-                        <h1 className="decorated"><span>Наши курсы </span></h1>      
+                        <h2 className="decorated"><span>Наши курсы </span></h2>      
                     </Col>
                 </Row>
                 <Accordion>
@@ -96,7 +96,7 @@ const Homepage = () =>{
             <Container className='mb-20' fluid>
                 <Row className='h-10'>
                     <Col className='Header text-center'>
-                    <h1 className="decorated"><span>Наше местоположение</span></h1> 
+                    <h2 className="decorated"><span>Наше местоположение</span></h2> 
                         
                     </Col>
                 </Row>
@@ -113,7 +113,7 @@ const Homepage = () =>{
             <Container className='News mb-20' fluid>
                 <Row className='h-10'>
                         <Col className='News-Header text-center'>
-                            <h1 className="decorated-white"><span>Новости BAR Studio</span></h1>    
+                            <h2 className="decorated-white"><span>Новости BAR Studio</span></h2>    
                         </Col>
                     </Row>
 
@@ -129,7 +129,7 @@ const Homepage = () =>{
             <Container className='Contacts mb-20' fluid>
                 <Row className='h-10'>
                     <Col className='Header text-center'>
-                    <h1 className="decorated"><span>Мы рады Вашим вопросам и предложениям </span></h1> 
+                    <h2 className="decorated"><span>Мы рады Вашим вопросам и предложениям </span></h2> 
                     </Col>
                 </Row>
                 <Row className='d-flex flex-column flex-md-row justify-content-center h-100'>

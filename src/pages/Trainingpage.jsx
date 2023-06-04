@@ -48,7 +48,7 @@ const Trainingpage = () =>{
         <Container className='mb-20'>
             <Row className='h-10'>
                 <Col className='Header text-center'>
-                <h1 className="decorated"><span>Наши курсы</span></h1> 
+                <h2 className="decorated"><span>Наши курсы</span></h2> 
                         
                 </Col>
             </Row>
